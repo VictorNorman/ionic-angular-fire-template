@@ -31,6 +31,8 @@ Error: node_modules/@angular/fire/compat/firestore/interfaces.d.ts:13:18 - error
   ... <snip> ...
 ```
 
+From my research this a known bug: https://github.com/angular/angularfire/issues/3290
+
 To fix these errors, I had to edit `package.json` to downgrade Angular from version 15 to version 14 and downgrade typescript from version 4.8.4 to version 4.7.4. Then, delete `node_modules` directory and `package-lock.json`. Then, do `npm install` again. Then `ionic build --prod` works.
 
 ***Notice***:
